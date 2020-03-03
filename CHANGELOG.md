@@ -22,6 +22,7 @@ All notable changes to Sourcegraph are documented in this file.
   [migration step](https://github.com/sourcegraph/deploy-sourcegraph/blob/master/docs/migrate.md) when upgrading
   past commit [821032e2ee45f21f701](https://github.com/sourcegraph/deploy-sourcegraph/commit/821032e2ee45f21f701caac624e4f090c59fd259) or when upgrading to 3.14.
   New installations starting with the mentioned commit or with 3.14 do not need this migration step.
+- Archived repositories are excluded from search by default. Adding `archived:yes` includes archived repositories.
 
 ### Fixed
 
