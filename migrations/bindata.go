@@ -82,6 +82,8 @@
 // 1528395656_add_not_null_constraint_to_campaign_description.up.sql (143B)
 // 1528395657_add_not_null_constraint_to_campaign_job_description.down.sql (83B)
 // 1528395657_add_not_null_constraint_to_campaign_job_description.up.sql (151B)
+// 1528395658_add_state_columns_to_changesets.down.sql (367B)
+// 1528395658_add_state_columns_to_changesets.up.sql (717B)
 
 package migrations
 
@@ -1790,6 +1792,46 @@ func _1528395657_add_not_null_constraint_to_campaign_job_descriptionUpSql() (*as
 	return a, nil
 }
 
+var __1528395658_add_state_columns_to_changesetsDownSql = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x72\x72\x75\xf7\xf4\xb3\xe6\xe2\x72\xf4\x09\x71\x0d\x52\x08\x71\x74\xf2\x71\x55\x48\xce\x48\xcc\x4b\x4f\x2d\x4e\x2d\x29\xe6\x72\x09\xf2\x0f\x50\x70\xf6\xf7\x09\xf5\xf5\x53\xf0\x74\x53\x70\x8d\xf0\x0c\x0e\x09\x56\x48\xad\x28\x49\x2d\xca\x4b\xcc\x89\x2f\x2e\x49\x2c\x49\x25\x5b\x77\x51\x6a\x59\x66\x6a\x39\x85\x86\x24\x67\xa4\x26\x67\xc3\xcd\x00\x2b\x0e\x89\x0c\x70\x45\x52\x0a\x37\x2b\x1e\xdd\xdd\x44\xaa\x46\x75\x27\x91\x9a\x50\xdd\xe5\xec\xef\xeb\xeb\x19\x62\xcd\x05\x08\x00\x00\xff\xff\x70\xca\x0d\xdc\x6f\x01\x00\x00")
+
+func _1528395658_add_state_columns_to_changesetsDownSqlBytes() ([]byte, error) {
+	return bindataRead(
+		__1528395658_add_state_columns_to_changesetsDownSql,
+		"1528395658_add_state_columns_to_changesets.down.sql",
+	)
+}
+
+func _1528395658_add_state_columns_to_changesetsDownSql() (*asset, error) {
+	bytes, err := _1528395658_add_state_columns_to_changesetsDownSqlBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "1528395658_add_state_columns_to_changesets.down.sql", size: 0, mode: os.FileMode(0), modTime: time.Unix(0, 0)}
+	a := &asset{bytes: bytes, info: info, digest: [32]uint8{0x25, 0xb2, 0x48, 0xda, 0x2b, 0x29, 0x8, 0xdf, 0x93, 0xcd, 0xd9, 0x7d, 0xec, 0xb4, 0x75, 0xae, 0xc4, 0xf5, 0x59, 0xe9, 0x7f, 0xae, 0xff, 0x7a, 0xc7, 0x64, 0x55, 0x1e, 0x49, 0x9c, 0x52, 0xad}}
+	return a, nil
+}
+
+var __1528395658_add_state_columns_to_changesetsUpSql = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x94\x91\xcd\x6e\xea\x30\x14\x84\xf7\x7e\x8a\xb3\xcb\xbd\x52\xdf\x20\xea\xc2\x10\xab\x42\x4a\x02\x02\x67\xd1\x55\x64\xc5\xa7\xc1\x22\xb1\x5d\xdb\x40\x1f\xbf\x82\xfe\xd8\xad\x42\x51\x76\x19\x4d\x3c\x73\xf4\xcd\x82\x3d\xad\xea\x9c\x90\xe5\x96\x51\xce\x80\x3f\x6f\x18\x74\x7b\xa1\x7b\xf4\x18\x5a\x7c\x0b\xe8\xb4\x18\x5a\x1f\x44\x40\xa0\x3b\x60\x75\x53\xc1\x3f\x02\x00\x90\x19\x8b\x3a\x7b\xf8\xf8\xee\x06\xe3\x51\x7e\xa9\x11\x5d\x1f\x95\xc4\x01\x03\xca\xec\xaa\xfe\xdf\x2f\x73\x78\x52\x78\x9e\xee\x14\xd6\x3a\x73\x8a\xd9\x9f\xcf\x5b\x87\xaf\x47\xf4\x21\x1a\x16\xb5\x54\xba\xff\xfe\xcf\x8c\x23\xea\xc4\x97\xca\x8f\xca\xfb\x19\x67\x75\x7b\xec\x0e\xd3\x57\x1d\xf5\x41\x9b\xb3\xbe\xd1\x6d\x85\x4f\xd8\xbc\x08\x35\xa4\xad\xb4\xe4\x6c\x0b\x9c\x2e\xca\xa4\xd5\x5f\x6d\x5a\x14\xb0\x5c\x97\x4d\x55\xc3\xaf\x25\x6e\x4d\x34\x3f\xef\x07\xec\x3b\x63\xcc\x4f\x4f\x99\xfd\x8d\x34\x27\xa4\xd9\x14\x17\xfe\x31\x16\x76\x8c\x4f\x67\x3d\x46\xe6\x97\xe1\xd6\x55\xb5\xe2\x39\x79\x0f\x00\x00\xff\xff\x6c\xff\x34\xb5\xcd\x02\x00\x00")
+
+func _1528395658_add_state_columns_to_changesetsUpSqlBytes() ([]byte, error) {
+	return bindataRead(
+		__1528395658_add_state_columns_to_changesetsUpSql,
+		"1528395658_add_state_columns_to_changesets.up.sql",
+	)
+}
+
+func _1528395658_add_state_columns_to_changesetsUpSql() (*asset, error) {
+	bytes, err := _1528395658_add_state_columns_to_changesetsUpSqlBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "1528395658_add_state_columns_to_changesets.up.sql", size: 0, mode: os.FileMode(0), modTime: time.Unix(0, 0)}
+	a := &asset{bytes: bytes, info: info, digest: [32]uint8{0x68, 0x8, 0x38, 0x1c, 0x26, 0xa4, 0xe0, 0x98, 0xae, 0x7f, 0xb3, 0x77, 0xd4, 0xf8, 0x8, 0x19, 0xea, 0x21, 0x22, 0xe6, 0xba, 0xb9, 0xd9, 0x21, 0xfe, 0x65, 0xb4, 0xae, 0x11, 0xd5, 0xac, 0x99}}
+	return a, nil
+}
+
 // Asset loads and returns the asset for the given name.
 // It returns an error if the asset could not be found or
 // could not be loaded.
@@ -1963,6 +2005,8 @@ var _bindata = map[string]func() (*asset, error){
 	"1528395656_add_not_null_constraint_to_campaign_description.up.sql":       _1528395656_add_not_null_constraint_to_campaign_descriptionUpSql,
 	"1528395657_add_not_null_constraint_to_campaign_job_description.down.sql": _1528395657_add_not_null_constraint_to_campaign_job_descriptionDownSql,
 	"1528395657_add_not_null_constraint_to_campaign_job_description.up.sql":   _1528395657_add_not_null_constraint_to_campaign_job_descriptionUpSql,
+	"1528395658_add_state_columns_to_changesets.down.sql":                     _1528395658_add_state_columns_to_changesetsDownSql,
+	"1528395658_add_state_columns_to_changesets.up.sql":                       _1528395658_add_state_columns_to_changesetsUpSql,
 }
 
 // AssetDir returns the file names below a certain
@@ -2088,6 +2132,8 @@ var _bintree = &bintree{nil, map[string]*bintree{
 	"1528395656_add_not_null_constraint_to_campaign_description.up.sql":       {_1528395656_add_not_null_constraint_to_campaign_descriptionUpSql, map[string]*bintree{}},
 	"1528395657_add_not_null_constraint_to_campaign_job_description.down.sql": {_1528395657_add_not_null_constraint_to_campaign_job_descriptionDownSql, map[string]*bintree{}},
 	"1528395657_add_not_null_constraint_to_campaign_job_description.up.sql":   {_1528395657_add_not_null_constraint_to_campaign_job_descriptionUpSql, map[string]*bintree{}},
+	"1528395658_add_state_columns_to_changesets.down.sql":                     {_1528395658_add_state_columns_to_changesetsDownSql, map[string]*bintree{}},
+	"1528395658_add_state_columns_to_changesets.up.sql":                       {_1528395658_add_state_columns_to_changesetsUpSql, map[string]*bintree{}},
 }}
 
 // RestoreAsset restores an asset under the given directory.
