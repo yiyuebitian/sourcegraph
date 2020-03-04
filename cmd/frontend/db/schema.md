@@ -892,16 +892,18 @@ Foreign-key constraints:
 
 # Table "public.user_pending_permissions"
 ```
-   Column    |           Type           |                               Modifiers                               
--------------+--------------------------+-----------------------------------------------------------------------
- id          | integer                  | not null default nextval('user_pending_permissions_id_seq'::regclass)
- bind_id     | text                     | not null
- permission  | text                     | not null
- object_type | text                     | not null
- object_ids  | bytea                    | not null
- updated_at  | timestamp with time zone | not null
+    Column    |           Type           |                               Modifiers                               
+--------------+--------------------------+-----------------------------------------------------------------------
+ id           | integer                  | not null default nextval('user_pending_permissions_id_seq'::regclass)
+ bind_id      | text                     | not null
+ permission   | text                     | not null
+ object_type  | text                     | not null
+ object_ids   | bytea                    | not null
+ updated_at   | timestamp with time zone | not null
+ service_type | text                     | not null
+ service_id   | text                     | not null
 Indexes:
-    "user_pending_permissions_perm_object_unique" UNIQUE CONSTRAINT, btree (bind_id, permission, object_type)
+    "user_pending_permissions_perm_object_service_unique" UNIQUE CONSTRAINT, btree (bind_id, permission, object_type, service_type, service_id)
 
 ```
 
