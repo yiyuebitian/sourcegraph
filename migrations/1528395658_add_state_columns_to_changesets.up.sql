@@ -1,25 +1,27 @@
 BEGIN;
 
 CREATE TYPE changeset_external_state AS ENUM (
-    'open',
-    'closed',
-    'merged',
-    'deleted'
+    'UNKNOWN',
+    'OPEN',
+    'CLOSED',
+    'MERGED',
+    'DELETED'
     );
 
 CREATE TYPE changeset_external_review_state AS ENUM (
-    'approved',
-    'changes_requested',
-    'pending',
-    'commented',
-    'dismissed'
+    'UNKNOWN',
+    'APPROVED',
+    'CHANGES_REQUESTED',
+    'PENDING',
+    'COMMENTED',
+    'DISMISSED'
     );
 
 CREATE TYPE changeset_external_check_state AS ENUM (
-    'unknown',
-    'pending',
-    'passed',
-    'failed'
+    'UNKNOWN',
+    'PENDING',
+    'PASSED',
+    'FAILED'
     );
 
 ALTER TABLE changesets
@@ -31,6 +33,8 @@ ALTER TABLE changesets
 ALTER TABLE changesets
     ADD COLUMN external_check_state changeset_external_check_state;
 
-UPDATE changesets SET external_check_state = 'unknown';
+UPDATE changesets SET external_state = 'UNKNOWN';
+UPDATE changesets SET external_review_state = 'UNKNOWN';
+UPDATE changesets SET external_check_state = 'UNKNOWN';
 
 COMMIT;
