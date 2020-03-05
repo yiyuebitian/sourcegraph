@@ -79,7 +79,7 @@
     "source-map-support": "^0.5.16",
     "tsc-watch": "^4.2.3",
     "tslint": "^5.20.1",
-    "typescript": "^3.7.2",
+    "typescript": "^3.9.0-dev.20200305",
     "typescript-json-schema": "^0.42.0"
   }
 }
