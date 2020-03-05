@@ -713,6 +713,10 @@ func (s *Service) CreateChangesetJobForCampaignJob(ctx context.Context, campaign
 		// Already exists
 		return nil
 	}
+
+	// TODO: Need to reset changesetjob if the existing changeset job failed
+	// with an error
+
 	changesetJob := &campaigns.ChangesetJob{
 		CampaignID:    campaign.ID,
 		CampaignJobID: job.ID,
